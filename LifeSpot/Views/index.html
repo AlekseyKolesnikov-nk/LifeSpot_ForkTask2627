@@ -3,8 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
+    <!--Подключение стилей по относительному пути из внешнего файла-->
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
 </head>
+
+<!--Хедер страницы находится сразу над тегом body-->
+<header id="header-index">
+   <!--Заголовок страницы-->
+   <h1>LifeSpot - прямые трансляции с улиц</h1>
+
+   <!--Параграф-->
+   <p>Покажем, что происходит прямо сейчас</p>
+</header>
+
 <body>
-    <p>Приветствуем на LifeSpot!</p>
+
+    <div class="searcher"
+         <button>Поиск видео</button>
+         <input type="text" placeholder="Введите название видео" size="50"/>
+    </div>
+
+    <div class="bordered">
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3 class="video-title">Нью-Йорк, Брайант Парк</h3>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3 class="video-title">Санкт-Петербург, Невский Проспект</h3>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3 class="video-title">Лондон, автобусный маршрут</h3>
+        </div>
+
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/237/novokuznetsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Новокузнецк</a><a href="https://yandex.ru/maps/237/novokuznetsk/?ll=87.136044%2C53.757547&utm_medium=mapframe&utm_source=maps&z=12" style="color:#eee;font-size:12px;position:absolute;top:14px;">Карта Новокузнецка с улицами и номерами домов — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=87.136044%2C53.757547&z=12" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        <h3 class="video-title">Яндекс-карты</h3>
+    </div>
+    </div>
+
 </body>
+
+<!--Сайд-бар страницы-->
+<!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
+<aside id="sidebar">
+    <div class="navbar">
+        <a href="/"><p>Все трансляции</p></a>
+        <a href="/"><p>О проекте</p></a>
+    </div>
+</aside>
+
+<!--Футер страницы находится под основной частью (body)-->
+<footer>
+    <p>LifeSpot - все права защищены</p>
+    <p>Связаться с нами: contact@lifespot.ru</p>
+</footer>
+
 </html>
