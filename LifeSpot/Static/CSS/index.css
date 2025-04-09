@@ -1,43 +1,68 @@
-﻿/* Комбинированный селектор - ко всем элементам */
-header, footer, aside, body, .navbar, .video-container {
+﻿﻿/* Комбинированный селектор - ко всем элементам */
+header, footer, aside, body, .navbar, .video-container 
+{
     font-family: "Helvetica 65 Medium", sans-serif;
 }
 
- /*Комбинированный селектор - ко выборочным элементам*/ 
-header, footer, body, .video-container {
+/* Комбинированный селектор - к выборочным элементам */
+header, footer, body, .video-container 
+{
     background-color: lightyellow;
-
 }
-/* Простые селекторы*/
-.video-container {
+
+/* Простые селекторы */
+.video-container 
+{
     display: inline-block;
     padding-left: 1%;
     padding-top: 1%;
 }
 
+.review-container, .review-button 
+{
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.review-text 
+{
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
 /* Стили панели навигации */
-.navbar p {
+.navbar p 
+{
     color: dodgerblue;
     padding-left: 15%;
 }
-/*Стили панели навигации при наведении мышью*/ 
-    .navbar p:hover {
+    
+    /* Стили панели навигации при наведении мышью */
+    .navbar p:hover 
+    {
         color: powderblue;
     }
 
-/*Глобальные стили для хедеров на всём сайте*/
-header {
+/* Глобальные стили для хедеров на всём сайте */
+header 
+{
     color: black;
     padding-left: 1%;
     padding-top: 1.2%;
 }
 
-/*Стиль хедера для главной страницы - приоритет селектора по идентификатору*/
-#header-index {
+/* Стиль хедера для главной страницы - приоритет селектора по идентификатору */
+#header-index 
+{
     color: 44453f;
 }
 
-footer {
+footer 
+{
     bottom: 0;
     font-size: medium;
     color: black;
@@ -45,38 +70,42 @@ footer {
     padding-left: 3%;
 }
 
-aside {
-    height: 100%; /* Высота в полный размер. Без него высота автоматически */
+aside 
+{
+    height: 100%;           /* Высота в полный размер. Без него высота автоматически */
     width: 10%;
-    position: absolute; /* Фиксированная позиция сайд-бара */
-    z-index: 1; /* Сайд-бар поверх остальных элементов */
-    top: 0; /* Сайдбар в самой верхней части страницы */
+    position: absolute;     /* Фиксированная позиция сайд-бара */
+    z-index: 1;             /* Сайд-бар поверх остальных элементов */
+    top: 0;                 /* Сайдбар в самой верхней части страницы */
     left: 0;
     background-color: #111; /* Черный цвет фона (задан в виде кода) */
-    overflow-x: hidden; /* Отключение горизонтальной прокрутки */
+    overflow-x: hidden;     /* Отключение горизонтальной прокрутки */
     padding-top: 2%;
-    font-size: large;
+    font-size: medium;
 }
 
-body {
+body 
+{
     padding-left: 11%;
 }
 
-.searcher {
+.searcher 
+{
     width: 600px;
     height: 30px;
     margin-left: 17px;
 }
 
-/*Стиль текстового поля*/
-.searcher input {
-    color: blue;
-}
+    /* Стиль текстового поля */
+    .searcher input 
+    {
+        color: blue;
+    }
 
-/*Стили текстового поля при наведении мышью*/
-.searcher input:hover {
-    background-color: yellow;
-    color: blue;
-    font-size: medium;
-}
-
+    /* Стили текстового поля при наведении мышью */
+    .searcher input:hover 
+    {
+        background-color: yellow;
+        color: blue;
+        font-size: medium;
+    }

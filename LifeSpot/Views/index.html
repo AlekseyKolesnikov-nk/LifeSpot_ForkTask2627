@@ -1,38 +1,71 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
-    <!--Подключение стилей по относительному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <script src="../Static/JS/index.js"></script>
+    <!--<script src="../Static/JS/about.js"></script>-->
+
+
+    <script>
+
+        //// Проверка на возраст
+        //checkAge();
+
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        // Всплывающее окно будет показано по таймауту
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+            10000);
+
+        // функция для получения пользовательского ввода
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
 </head>
 
 <!--Хедер страницы находится сразу над тегом body-->
 <header id="header-index">
-   <!--Заголовок страницы-->
-   <h1>LifeSpot - прямые трансляции с улиц</h1>
-
-   <!--Параграф-->
-   <p>Покажем, что происходит прямо сейчас</p>
+    <h1>LifeSpot - прямые трансляции с улиц</h1>
+    <p>Покажем, что происходит прямо сейчас</p>
+    <!--<input type="text" oninput="filterContent()" size=50%>-->
 </header>
+
+<!--SIDEBAR-->
 
 <body>
 
     <div class="searcher"
-         <button>Поиск видео</button>
-         <input type="text" placeholder="Введите название видео" size="50"/>
+        <button>Поиск видео</button>
+
+        <input type="text" oninput="
+        const inputParseFunction = function ()                              // Функция объявлена через expression
+        {
+           return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+        filterContent( inputParseFunction )                                 // Вызов (функция в аргумент передаётся без круглых скобок)
+        " size=50%>
     </div>
 
     <div class="bordered">
-
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Нью-Йорк, Брайант Парк</h3>
         </div>
+
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Санкт-Петербург, Невский Проспект</h3>
         </div>
+
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Лондон, автобусный маршрут</h3>
@@ -42,21 +75,8 @@
         <h3 class="video-title">Яндекс-карты</h3>
     </div>
     </div>
-
 </body>
 
-<!--Сайд-бар страницы-->
-<aside id="sidebar">
-    <div class="navbar">
-        <a href="/"><p>Все трансляции</p></a>
-        <a href="/"><p>О проекте</p></a>
-    </div>
-</aside>
-
-<!--Футер страницы находится под основной частью (body)-->
-<footer>
-    <p>LifeSpot - все права защищены</p>
-    <p>Связаться с нами: contact@lifespot.ru</p>
-</footer>
+<!--FOOTER-->
 
 </html>
